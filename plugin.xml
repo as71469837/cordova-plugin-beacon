@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="huayu-cordova-plugin-beacon" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>beaconHelper</name>
+    <js-module name="beaconHelper" src="www/beaconHelper.js">
+        <clobbers target="beaconHelper" />
+    </js-module>
+    <platform name="android">
+        
+        <framework src="src/android/gradle/baconHelper.gradle" custom="true" type="gradleReference" />
+
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="beaconHelper">
+                <param name="android-package" value="huayu.cordova.plugin.beacon.beaconHelper" />
+            </feature>
+        </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+            <uses-feature
+                android:name="android.hardware.bluetooth_le"
+                android:required="true" />
+
+        </config-file>
+
+        <source-file src="src/android/beaconHelper.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/BeaconModel.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/Location.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/LocationDistanceCalculator.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/MallToRssiService.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/Point.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/PostBeaconModel.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+        <source-file src="src/android/SphericalMercatorProjection.java"
+            target-dir="src/huayu/cordova/plugin/beacon" />
+                        
+    </platform>
+</plugin>

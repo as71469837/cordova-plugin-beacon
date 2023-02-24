@@ -1,0 +1,8 @@
+
+dependencies {
+    implementation 'org.altbeacon:android-beacon-library:2+'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    //Gson 数据解析器依赖库
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+}

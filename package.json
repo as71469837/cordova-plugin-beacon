@@ -1,0 +1,23 @@
+{
+  "name": "beaconhelper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DaSheng",
+  "license": "Apache-2.0",
+  "description": "beacon,indoor-positioning",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/as71469837/cordova-plugin-beacon.git"
+  },
+  "keywords": [
+    "cordova",
+    "beacon"
+  ],
+  "bugs": {
+    "url": "https://github.com/as71469837/cordova-plugin-beacon/issues"
+  },
+  "homepage": "https://github.com/as71469837/cordova-plugin-beacon#readme"
+}
